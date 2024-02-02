@@ -22,7 +22,7 @@ const svg = d3.select('#grid')
 
 // Add background image
 svg.append('image')
-  .attr('xlink:href', '/background.jpg')
+  .attr('xlink:href', 'https://alix-pham.github.io/biosecurity-map/background.jpg')
   .attr('x', xOffset)
   .attr('y', 0)
   .attr('width', 60 * gridSize)
