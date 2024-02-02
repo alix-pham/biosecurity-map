@@ -1,2 +1,2 @@
-# AI-alignment-map
-A map of the AI alignment landscape
+# Biosecurity Map
+A map of the biosecurity landscape
