@@ -8,7 +8,7 @@ d3.csv(sheetUrl).then(function(data) {
     delete data['columns'];
 
     // delete hidden rows
-    data = data.filter(d => d.hide != 'x');
+    data = data.filter(d => d.hide != 'FALSE');
 
     data.map(function(d) {d.x = parseFloat(d.x); d.y = parseFloat(d.y)});
 
@@ -98,7 +98,7 @@ d3.csv(sheetUrl).then(function(data) {
     details
         .append('div')
         .classed('long-label', true)
-        .html(d => d.LongLabel);
+        .html(d => d.Name);
 
     details
         .append('div')
