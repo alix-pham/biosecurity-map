@@ -89,7 +89,7 @@ const tooltip = d3.select('#tooltip');
 
 function drawSquare(row) {
   // Discard rows with 'x' in the 'hide' column
-  if (row.hide === 'x') return;
+  if (row.hide === 'TRUE') return;
 
   const x = +row.x;
   const y = +row.y;
@@ -97,7 +97,7 @@ function drawSquare(row) {
   const logo = row.logo;
   const label = row.Label;
   const link = row.Link;
-  const longLabel = row.LongLabel;
+  const longLabel = row.Name;
   const description = row.Description;
 
   // Calculate the position in pixels
