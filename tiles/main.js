@@ -22,7 +22,7 @@ d3.csv(sheetUrl).then(function(data) {
     const yScale = d3.scaleLinear(yDomain, [10,90]);
 
     const sections = [];
-    new Set(d3.map(data, d=>d.tags)).forEach(x =>
+    new Set(d3.map(data, d=>d.group)).forEach(x =>
         sections.push(
         {
             title: x,
@@ -107,7 +107,7 @@ d3.csv(sheetUrl).then(function(data) {
 
 
     for (let section of sections) {
-        sectionDivs = gridSlots.filter(d => d.tags === section.title);
+        sectionDivs = gridSlots.filter(d => d.group === section.title);
         $( sectionDivs.nodes() ).appendTo( $(`#${section.id}`) );
     }
 
